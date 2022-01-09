@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes sliding {
+            0% {
+                background-color: yellow;
+                left: 0px;
+                top: 0px;
+
+            }
+
+            20% {
+                top: 350px;
+                background-color: greenyellow;
+            }
+
+            40% {
+                top: 0px;
+                background-color: lightgreen;
+            }
+
+            60% {
+                top: 350px;
+                background-color: blue;
+
+            }
+
+            80% {
+                top: 0px;
+                background-color: blueviolet;
+            }
+
+            100% {
+                background-color: violet;
+                left: 1260px;
+                top: 350px;
+            }
+        }
+
+        .stage {
+            width: 1360px;
+            height: 450px;
+            background-color: lightskyblue;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: relative;
+            animation: sliding 4s linear 0 infinite alternate;
+            animation-play-state: running;
+        }
+
+        .stage:hover .ball {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: relative;
+            animation: sliding 3s linear 0.1s infinite alternate;
+            animation-play-state: running;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        .Size {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="Size">My Animation Art</h1>
+    <div class="stage">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+
+</html>
